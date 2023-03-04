@@ -1,0 +1,231 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* Global Styling Values  */
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+
+    font-size: 16px;
+    overflow-x: hidden;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The Styling  */
+
+.container {
+
+    box-shadow: 1px 1px 7px 8px #00000009;
+    width: 350px;
+    min-height: fit-content;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.container > img {
+
+    width: 100%;
+}
+
+.container section {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Global Section Children */
+
+.container section .title,
+.container section .description,
+.container section .box,
+.container section .button,
+.container section .cancel-link {
+
+    width: 100%;
+    text-align: center;
+}
+
+/* Styling Section Children */
+
+.container section .description {
+
+    width: 90%;
+    opacity: .58;
+    font-size: .7rem;
+    line-height: 19px;
+    margin-top: 15px;
+}
+
+    /*! Start Box  */
+
+.container section .box {
+
+    display: flex;
+    background-color: #eee;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.container section .box .con {
+
+    display: flex;
+    width: 140px;
+    justify-content: space-between;
+}
+
+.container section .box .icon img {
+
+    width: 40px;
+    height: 40px;
+}
+
+
+.container .box .plan-price p:first-of-type {
+
+    font-size: .78rem;
+    font-weight: 700;
+}
+
+.container .box .plan-price p:last-of-type {
+  
+    font-size: .6rem;
+    opacity: 0.7;
+    letter-spacing: 1px;
+}
+
+.container section .box .link {
+
+    font-size: .6rem;
+}
+
+.container section .box .link:hover {
+
+    text-decoration: none;
+}
+
+    /*! End Box  */
+
+.container section .button {
+
+    text-decoration: none;
+    background-color: hsl(245, 75%, 52%);
+    height: 40px;
+    color: #fff;
+    letter-spacing: .6px;
+    font-weight: 600;
+    font-size: .6rem;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container section .button:hover {
+
+    background-color: hsl(245deg 75% 52% / 72%);;
+}
+
+.container section .cancel-link {
+
+    font-size: .65rem;
+    text-decoration: none;
+    color: #0000009c;
+    font-weight: 900;
+}
+
+.container section .cancel-link:hover {
+
+    color: #000;
+}
+
+/*! Media Mobile (375px)  */
+
+@media (max-width: 375px) {
+    .container {
+        width: 90vw;
+    }
+    .container section .title {
+        font-size: 1rem;
+    }
+    .container section .description {
+        font-size: .5rem;
+        line-height: 11px;
+    }
+    .container section .box .icon img {
+        width: 30px;
+        height: 30px;
+    }
+    .container section .box .con {
+        width: 128px;
+    }
+    .container .box .plan-price p:first-of-type {
+        font-size: 0.68rem;
+    }
+    .container .box .plan-price p:last-of-type {
+        font-size: .5rem;
+    }
+    .container section .box .link {
+        font-size: .5rem;
+    }
+}
+
+/* The Water Mark (start) */
+
+.watermark {
+
+    z-index: 9999999;  
+    position: absolute;
+    left: 11%;
+    transform: rotate(-10deg);        
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);   
+    -ms-transform: rotate(-10deg);    
+    -o-transform: rotate(-10deg);
+    font-size: 2.5rem;
+    color: #3d3838;
+    cursor: context-menu;
+    font-weight: 100;
+    font-family: cursive;
+    opacity: 0.4;
+    bottom: 11%;
+}
+
+.watermark:hover {
+    display: none;
+}
+
+@media (max-width:320px) {
+    .watermark {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width:230px) {
+    .watermark {
+        font-size: 1rem;
+    }
+}
+
+/* The Water Mark (end) */
